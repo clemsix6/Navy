@@ -51,3 +51,60 @@ Pour chaques lignes il y a 3 informations séparées par des ":". La permière i
 8|. 4 . . . . . .
 ```
 
+
+
+### Connection
+
+Pour connecter une application à l'autre il suffit d'entrer son PID.
+
+```
+Première instance:
+
+∼/B-PSU-200> ./navy pos1
+my_pid: 4242
+waiting for enemy connection...
+enemy connected
+```
+
+```
+Deuxième instance:
+
+∼/B-PSU-200> ./navy 4242 pos2
+my_pid: 4250
+successfully connected
+```
+
+
+
+### Utilisation
+
+Une fois connecté il vous suffit d'entrer quelle case attaquer:
+
+```
+my positions:
+|A B C D E F G H
+-+---------------
+1|. . 2 . . . . .
+2|. . 2 . . . . .
+3|. . . . . . . .
+4|. . . 3 3 3 . .
+5|. 4 . . . . . .
+6|. 4 . . . . . .
+7|. 4 . 5 5 5 5 5
+8|. 4 . . . . . .
+enemy’s positions:
+|A B C D E F G H
+-+---------------
+1|. . . . . . . .
+2|. . . . . . . .
+3|. . . . . . . .
+4|. . . . . . . .
+5|. . . . . . . .
+6|. . . . . . . .
+7|. . . . . . . .
+8|. . . . . . . .
+attack: Z0
+wrong position
+attack: B6
+B6: missed
+```
