@@ -2,13 +2,15 @@
 
 ### Introduction
 
-Le navy est un projet qui conciste à créer un jeu textuel de type bataille naval jouable en multijoueur local via les signaux.
+Le navy est un projet qui consiste à créer un jeu textuel de type bataille naval jouable en multijoueur local via les signaux.
 
 
 
 ### Signaux
 
-Les signaux est une fonctionnalité des sytèmes unix. Ils permettent d'échanger des informations entre les différentes applications fonctionnantes sur le même système. Voici un petit échantillon des signaux qui existent dans un système unix:
+Les signaux sont une fonctionnalité des sytèmes unix. Ils permettent d'échanger des informations entre les différentes applications fonctionnant sur le même système. Voici un petit échantillon des&#x20;
+
+signaux qui existent dans un système unix :
 
 | Id | Nom                                                                | Description                                                                       |
 | -- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
@@ -20,14 +22,13 @@ Les signaux est une fonctionnalité des sytèmes unix. Ils permettent d'échange
 | 8  | SIGFPE                                                             | Erreur sur un [nombre flottant](https://fr.wikipedia.org/wiki/Virgule\_flottante) |
 | 9  | [SIGKILL](https://fr.wikipedia.org/wiki/SIGKILL?tableofcontents=0) | Tue immédiatement le processus                                                    |
 
-Pour faire communiquer des informations de type string entre deux applications nous avons utilisés  les signaux SIGUSER1 et SIGUSER2. Pour chaques caractères dans la string nous envoyons x fois un signal par exemple pour A on envoie 1 fois un signal, pour B 2 fois un signal etc. De cette manière en envoyant des milliers de signaux par secondes on a pu faire echanger des strings de \
-manière très rapide entre les deux applications.
+Pour faire communiquer des informations de type string entre deux applications, nous avons utilisé les signaux SIGUSER1 et SIGUSER2. Pour chaque caractères dans la string, nous envoyons x fois un signal par exemple pour A on envoie 1 fois un signal, pour B 2 fois un signal, etc. De cette manière en envoyant des milliers de signaux par secondes on a pu faire échanger des strings de manière très rapide entre les deux applications.
 
-###
+
 
 ### Map
 
-Les dispositions des bateaux sont sauvegardés dans des fichiers texte comme dans l'exemple ci-dessous:
+Les dispositions des bateaux sont sauvegardées dans des fichiers texte comme dans l'exemple ci-dessous:
 
 ```
 2:C1:C2
@@ -36,7 +37,7 @@ Les dispositions des bateaux sont sauvegardés dans des fichiers texte comme dan
 5:D7:H7
 ```
 
-Pour chaques lignes il y a 3 informations séparées par des ":". La permière information est la taille du bateau, la deuxième la case de début et la dernière la case de fin. L'exemple ci-dessus donne le plateau de jeu suivant:
+Pour chaque lignes il y a 3 informations séparées par des ":". La première information est la taille du bateau, la deuxième la case de début et la dernière la case de fin. L'exemple ci-dessus donne le plateau de jeu suivant:
 
 ```
 |A B C D E F G H
@@ -53,9 +54,9 @@ Pour chaques lignes il y a 3 informations séparées par des ":". La permière i
 
 
 
-### Connection
+### Connexion
 
-Pour connecter une application à l'autre il suffit d'entrer son PID.
+Pour connecter une application à l'autre, il suffit d'entrer son PID.
 
 ```
 Première instance:
@@ -78,7 +79,7 @@ successfully connected
 
 ### Utilisation
 
-Une fois connecté il vous suffit d'entrer quelle case attaquer:
+Une fois connecté, il vous suffit d'entrer quelle case attaquer:
 
 ```
 my positions:
